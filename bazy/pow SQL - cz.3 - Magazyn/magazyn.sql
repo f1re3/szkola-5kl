@@ -4,7 +4,7 @@ Magazyny:
 Kod  całkowity, klucz podstawowy
 Lokalizacja tekst, nie puste
 Pojemność całkowita, nie puste
-CREATE TABLE Magazyn(
+CREATE TABLE Magazyny(
     kod int PRIMARY KEY,
     lokalizacja varchar(255) NOT NULL,
     pojemnosc int NOT NULL
@@ -18,10 +18,10 @@ Magazyn całkowita, nie pusta, pole klucza obcego (odwołuje się do pola kod w 
 CREATE TABLE Kontenery(
     kod char(4) PRIMARY KEY,
     zawartosc varchar(255),
-    wartosc dec(6,2),
+    wartosc decimal(6,2),
     magazyn int NOT NULL,
     FOREIGN KEY(magazyn) REFERENCES Magazyny(kod)
-)
+);
 
  ......... ,
 --  CONSTRAINT nazwa_konstraintu FOREIGN KEY (pole_klucza_obcego) REFERENCES tabela_do_ktorej_sie_odwołuje(powiązany_klucz_podstawowy)
@@ -59,33 +59,53 @@ Dodaj dane
  
 
 1. Wyświetl wszystkie dane o wszystkich magazynach (zrzut)
+SELECT * FROM Magazyny;
 
 2. Wyświetl wszystkie kontenery o wartości większej niż $150.  (zrzut)
- 
+SELECT zawartosc
+FROM kontenery
+WHERE wartosc>150;
+
 3. Co jest przechowywane w kontenerach? Wyświetl zawartość tak, aby dane się nie powtarzały.   (zrzut)
- 
+SELECT DISTINCT zawartosc
+FROM kontenery;
 
 4. Wyświetl średnią wartość wszystkich kontenerów.   (zrzut)
-
+SELECT AVG(wartosc) 
+FROM kontenery;
 
 5. Wyświetl kody magazynów wraz ze średnią wartością zawartych w nich kontenerów.  (zrzut)
+SELECT kod, AVG(wartosc)
+FROM kontenery
+GROUP BY magazyn;
 
 6. Wyświetl kody magazynów wraz ze średnią wartością zawartych w nich kontenerów, ale ogranicz się do tych, w których średnia wartość kontenerów jest większa niż 150.  (zrzut)
+SELECT kod, AVG(wartosc)
+FROM kontenery
+WHERE wartosc>150;
 
 7. Wyświetl kod każdego kontenera, wraz z miastem, gdzie jest zlokalizowany (czyli lokalizacją magazynu)  (zrzut)
+SELECT kontenery.kod, lokalizacja 
+FROM kontenery
+    INNER JOIN Magazyny ON kontenery.magazyn=Magazyny.kod;
 
 8. Wyświetl  kody magazynów wraz z liczbą kontenerów w każdym z tych magazynów.  (zrzut)
+SELECT magazyn, COUNT(*)
+FROM kontenery
+GROUP BY magazyn;
+
 
 9. Rozwiń poprzednie zapytanie tak, aby w zestawieniu były wymienione również magazyny, w których nie ma kontenerów (powinna być wyświetlona liczba zero, a nie magazyn pominięty w tym zestawieniu)  (zrzut)
+SELECT magazyny.kod, COUNT(kontenery.kod)
+FROM kontenery 
+    RIGHT JOIN magazyny ON kontenery.magazyn = magazyny.kod
+GROUP BY magazyny.kod;
 
 Wskazówka: wybierz kod magazynu z tabeli magazyny oraz policz kod z tabeli Kontenery; dane wybieraj z dwóch tabel połączonych połączeniem rozszerzającym (LEFT JOIN lub RIGHT JOIN), z rozszerzanej strony powinna być tabela Magazyny (wybieramy wszystkie magazyny, także te, w których nie ma kontenerów); grupowanie według kodu magazynu
-
- 
-
- 
-
 10.  Wyświetl kody wszystkich magazynów, które są przeładowane (magazyn jest przeładowany, jeśli liczba zawartych w nim kontenerów jest większa niż jego pojemność)  (zrzut)
-
+SELECT magazyny.kod, magazyny.pojemnosc
+FROM magazyny
+WHERE pojemnosc < (SELECT COUNT(*) FROM kontenery WHERE magazyn);
  
 
 np. wyświetl kody tych magazynów (z tabeli Magazyny), których pojemność jest mniejsza niż

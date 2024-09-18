@@ -13,3 +13,11 @@
     color: blue;
     padding: 10px 10px;
 }
+
+.normal{
+    font-style: normal;
+}
+
+.italic{
+    font-style: italic;
+}

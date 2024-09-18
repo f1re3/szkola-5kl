@@ -27,16 +27,23 @@ const redE = document.getElementById('red')
 const greenE = document.getElementById('green')
 const blueE = document.getElementById('blue')
 const procE = document.getElementById('proc')
-let proc = procE.value
-let proc2 = proc*0.01
+const italicE = document.getElementById('italic')
 
 redE.addEventListener('click', (e)=>{
+    let proc = Number(procE.value)
     changeE.style.color = 'red'
-    // changeE.style.fontSize = 
+    changeE.style.fontSize = `${proc}%`
+    changeE.className = italicE.value
 })
 greenE.addEventListener('click', (e)=>{
+    let proc = Number(procE.value)
     changeE.style.color = 'green'
+    changeE.style.fontSize = `${proc}%`
+    changeE.className = italicE.value
 })
 blueE.addEventListener('click', (e)=>{
+    let proc = Number(procE.value)
     changeE.style.color = 'blue'
+    changeE.style.fontSize = `${proc}%`
+    changeE.className = italicE.value
 })
