@@ -56,24 +56,42 @@ FROM filmy
 WHERE rating IS NULL;
 
 4. Wyświetl wszystkie  kina, w których aktualnie nie są wyświetlane żadne filmy. 
-SELECT * kina
+SELECT *
+FROM kina 
+WHERE film IS NULL;
 
-5. Wyświetl wszystkie dane o kinach i filmach, uwzględnij tylko dane o filmach, które są wyświetlane w tych kinach i dane o kinach, w których są wyświetlane jakieś filmy. 
-
+5. Wyświetl wszystkie dane z wszystkich tabel
+SELECT * 
+FROM kina  
+    INNER JOIN filmy ON kina.film = filmy.kod;
 
 6. Wyświetl wszystkie dane o kinach i filmach, uwzględnij w zestawieniu także te kina, w których aktualnie nie są wyświetlane żadne filmy.
-
+SELECT * 
+FROM kina  
+    LEFT JOIN filmy ON kina.film = filmy.kod;
 
 7. Wyświetl wszystkie dane o kinach i filmach, uwzględnij w zestawieniu także te filmy, które nie są aktualnie wyświetlane w żadnych kinach. 
-
+SELECT * 
+FROM kina  
+    RIGHT JOIN filmy ON kina.film = filmy.kod;
 
 8. Wyświetl wszystkie dane o kinach i filmach, uwzględnij w zestawieniu także te kina, w których aktualnie nie są wyświetlane żadne filmy oraz  te filmy, które nie są aktualnie wyświetlane w żadnych kinach. 
-
+SELECT *
+FROM kina  
+    LEFT JOIN filmy ON kina.film = filmy.kod
+UNION
+SELECT * 
+FROM kina  
+    RIGHT JOIN filmy ON kina.film = filmy.kod;
 
 9. Dodaj film  "One, Two, Three" (bez ratingu)
- 
+INSERT INTO filmy (tytul) VALUES ('One, Two, Three');
 
 10. Ustal rating wszystkich filmów bez ratingu na  "G".
-
+UPDATE filmy 
+SET rating = '6'
+where rating IS NULL;
 
 11. usuń kina wyświetlające filmy z ratingiem "NC-17".
+DELETE FROM kina
+WHERE film = (SELECT kod FROM filmy WHERE rating = 'NC-17');

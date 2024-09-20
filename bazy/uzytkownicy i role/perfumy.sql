@@ -50,4 +50,5 @@ GRANT 'usuwanie' TO 'selektor_2'@'localhost';
 
 10. Sprawdź czy selektor oraz edytor mają prawa do usuwania danych z bazy (usuń skład perfum p_2 oraz p_3)
 
+
 11. Odmów selektorowi praw do usuwania (deny) z tabeli skład i sprawdź ponownie jego prawa do usuwania
