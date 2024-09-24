@@ -1,0 +1,22 @@
+body{
+    text-align: center;
+}
+
+section{
+    width: auto;
+    color: blue;
+}
+
+input{
+    width: max-content;
+}
+
+input:focus{
+    
+}
+
+button:hover{
+    background-color: brown;
+    color: white;
+    cursor: pointer;
+}
