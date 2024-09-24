@@ -1,4 +1,29 @@
+body{
+    display: flex;
+}
+
+.left{
+    width: 50%;
+}
+
+.right{
+    width: 50%;
+}
+
 .cod{
     color: red;
     font-family: 'Courier New';
+}
+
+.red{
+    background-color: red;
+    color: green;
+}
+.green{
+    background-color: green;
+    color: blue;
+}
+.blue{
+    background-color: blue;
+    color: red;
 }
