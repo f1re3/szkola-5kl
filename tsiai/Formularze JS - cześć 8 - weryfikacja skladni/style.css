@@ -12,7 +12,7 @@ input{
 }
 
 input:focus{
-    
+    background-color: bisque;
 }
 
 button:hover{
