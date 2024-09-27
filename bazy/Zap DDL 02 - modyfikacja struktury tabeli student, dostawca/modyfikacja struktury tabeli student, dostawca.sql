@@ -77,12 +77,18 @@ CREATE TABLE zwierze(
  
 Zmodyfikuj powyższe tabele:
 A. kolumny nazwa z tabel kraj i gatunek mają być niepuste i unikatowe,
-ALTER TABLE kraj
-MODIFY nazwa 
+ALTER TABLE kraj, gatunek
+MODIFY nazwa varchar(30) NOT NULL;
 
 B. W tabeli zwierze zmień nazwę kolumny id_gatunek na gatunek_id oraz id_kraj na kraj_id
- 
+ALTER TABLE zwierze
+
+
+
 C. kolumna gatunek_id z tabeli zwierze jest kluczem obcym z tabeli gatunek,
- 
+ALTER TABLE zwierze
+ADD FOREIGN KEY(gatunek_id) REFERENCES gatunek(id_gatunek);
+
 D. kolumna kraj_id z tabeli zwierze jest kluczem obcym z tabeli kraj
- 
+ALTER TABLE zwierze
+ADD FOREIGN KEY(kraj_id) REFERENCES kraj(id_kraj);
