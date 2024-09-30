@@ -1,0 +1,31 @@
+body{
+    font-style: georgia;
+}
+
+#baner1,#baner2{
+    background-color: #3CB371;
+    color: white;
+    height: 100px;
+    width: 40%;
+}
+
+#baner3{
+    background-color: #3CB371;
+    height: 100px;
+    width: 20%;
+}
+
+
+
+footer{
+    background-color: #3CB371;
+    color: white;
+}
+
+h6{
+    text-align: right;
+}
+
+form{
+    padding: 30px;
+}
