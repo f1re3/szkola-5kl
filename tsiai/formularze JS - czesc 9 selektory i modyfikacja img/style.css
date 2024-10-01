@@ -1,0 +1,56 @@
+*{
+    margin: auto;
+}
+
+header{
+    height: 10vh;
+    background-color: cadetblue;
+}
+
+main{
+    display: flex;
+}
+
+nav{
+    width: 40%;
+    background-color: antiquewhite;
+}
+
+nav div:first-child{
+    height: 27vh;
+    background-color: blanchedalmond;
+}
+
+nav div:first-child + div{
+    height: 26vh;
+    background-color: burlywood;
+}
+
+nav div:last-child{
+    height: 26vh;
+    background-color: wheat;
+}
+
+aside{
+    width: 60%;
+    background-color: azure;
+}
+
+aside section:first-child{
+    height: 40vh;
+    background-color: coral;
+}
+
+img{
+    height: 40vh;
+}
+
+aside section:last-child{
+    height: 40vh;
+    background-color: darkgray;
+}
+
+footer{
+    height: 10vh;
+    background-color: bisque;
+}
