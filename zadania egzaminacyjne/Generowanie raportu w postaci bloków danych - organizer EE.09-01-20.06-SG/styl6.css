@@ -2,6 +2,10 @@ body{
     font-style: georgia;
 }
 
+header{
+    display: flex;
+}
+
 #baner1,#baner2{
     background-color: #3CB371;
     color: white;
@@ -15,7 +19,18 @@ body{
     width: 20%;
 }
 
+main{
+    display: flex;
+    flex-wrap: wrap;
+}
 
+section{
+    background-color: #FFDAB9;
+    width: 170px;
+    height: 90px;
+    margin: 5px;
+    border: 1px solid #3CB371 ;
+}
 
 footer{
     background-color: #3CB371;

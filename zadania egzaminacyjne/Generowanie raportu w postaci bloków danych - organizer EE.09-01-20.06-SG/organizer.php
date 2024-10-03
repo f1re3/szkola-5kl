@@ -1,3 +1,10 @@
+<?php
+    $conn = new mysqli('localhost', 'root', '', '4e_2_egz_generowanie');
+    $sql = "UPDATE zadania
+    SET wpis = 'Wycieczka: Karkonosze'
+    WHERE dataZadania = '2020-08-27';"
+?>
+
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -23,14 +30,30 @@
         </div>
     </header>
     <main>
-        <script>
+        <?php
+            $sql ="SELECT dataZadania, miesiąc, wpis
+            FROM zadania
+            WHERE miesiąc = 'sierpień';";
 
-        </script>
+            $result = $conn -> query($sql);
+            while ($row = $result -> fetch_assoc()) {
+                $data = $row["dataZadania"];
+                $miesiac = $row["miesiąc"];
+                $wpis = $row["wpis"];
+                echo "<section>"."<h6>$data $miesiac</h6>"."<p>$wpis</p>"."</section>";
+            }
+        ?>
     </main>
     <footer>
-        <script>
+    <?php            
+            $sql = "SELECT miesiąc, rok
+            FROM zadania
+            WHERE dataZadania = '2020-08-01';";
 
-        </script>
+            
+
+            $conn  -> close();
+        ?>
         <p>Stronę wykonał: 000000000</p>
     </footer>
 </body>
