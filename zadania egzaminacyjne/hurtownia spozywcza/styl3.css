@@ -1,0 +1,31 @@
+*{
+    font-family: tahoma;
+    margin: auto;
+}
+
+header{
+    background-color: tomato;
+    color: white;
+    margin: 10px;
+}
+
+main{
+    background-color: seashell;
+    height: 500px;
+    overflow: auto;
+}
+
+section{
+    background-color: white;
+}
+
+div{
+    display: flex;
+}
+
+footer{
+    background-color: tomato;
+    color: white;
+    width: 25%;
+    height: 160px;
+}

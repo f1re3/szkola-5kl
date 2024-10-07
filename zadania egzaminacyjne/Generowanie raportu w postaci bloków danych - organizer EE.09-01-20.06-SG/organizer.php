@@ -50,7 +50,12 @@
             FROM zadania
             WHERE dataZadania = '2020-08-01';";
 
-            
+            $result = $conn -> query($sql);
+            while ($row = $result -> fetch_assoc()){
+                $miesiac = $row["miesiąc"];
+                $rok = $row["rok"];
+                echo "<h1>"."miesiąc: $miesiac, rok: $rok ".'</h2>';
+            }
 
             $conn  -> close();
         ?>
