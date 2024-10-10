@@ -1,0 +1,15 @@
+body{
+    display: flex;
+}
+
+#left{
+    background-color: aqua;
+    width: 50%;
+    height: 250px;
+}
+
+#right{
+    background-color: blanchedalmond;
+    width: 50%;
+    height: 250px;
+}
