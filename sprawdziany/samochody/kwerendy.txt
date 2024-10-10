@@ -1,0 +1,11 @@
+zapytanie 1: wybierające jedynie pola id, marka i model ze wszystkich rekordów tabeli samochody
+SELECT id, marka, model
+FROM samochody;
+
+zapytanie 2: wybierające jedynie pola id samochodu oraz Klient dla wszystkich rekordów tabeli zamowienia
+SELECT Samochody_id, Klient
+FROM zamowienia;
+
+zapytanie 3: wybierające wszystkie pola z tabeli samochody, dla których marka to Fiat
+SELECT * FROM samochody
+WHERE marka = 'Fiat';
