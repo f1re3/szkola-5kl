@@ -7,12 +7,11 @@ formE.addEventListener('submit', (e)=>{
     inputV = inputE.value
     let liE = document.createElement('li')
     liE.innerHTML = inputV
-    if(inputE.length <= 2){
-        inputE.style.backgroundColor = 'red'
-    }
-    else{
+    if(inputV.length > 2){
         ulE.appendChild(liE)
         inputE.value = null
-        inputE.style.backgroundColor = 'none'
+        inputE.style.backgroundColor = 'white'
     }
+    else
+        inputE.style.backgroundColor = 'red'
 })
