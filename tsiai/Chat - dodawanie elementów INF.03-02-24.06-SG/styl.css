@@ -1,0 +1,84 @@
+*{
+    margin: 0 auto;
+    font-family: Garamond;
+}
+
+#caly{
+    display: flex;
+}
+
+#lewy{
+    width: 80%;
+    height: 680px;
+}
+
+header{
+    background-color: tomato;
+    color: white;
+    text-align: center;
+    height: 80px;
+}
+
+main{
+    height: 600px;
+}
+
+#chat{
+    border: solid 1px tomato;
+    margin: 15px;
+    height: 470px;
+    overflow: scroll;
+}
+
+#chat div{
+    border-radius: 5px;
+    width: 90%;
+    height: 70px;
+    margin: 2px;
+    padding: 3px;
+}
+
+.jola{
+    background-color: #EEE;
+}
+
+.jola img{
+    float: left;
+}
+
+.krzychu{
+    background-color: #CCC;
+    text-align: right;
+}
+
+.krzychu img{
+    float: right;
+}
+
+input{
+    width: 500px;
+}
+
+button{
+    background-color: tomato;
+    border: solid 1px darkred;
+    padding: 5px;
+    font-weight: 900;
+}
+
+aside{
+    background-color: coral;
+    width: 20%;
+    height: 680px;
+}
+
+footer{
+    background-color: tomato;
+    color: white;
+    text-align: center;
+}
+
+img{
+    border-radius: 50%;
+    padding: 0px 10px 0px 10px;
+}
