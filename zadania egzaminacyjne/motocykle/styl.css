@@ -1,0 +1,72 @@
+*{
+    font-family: Verdana;
+    margin: auto;
+}
+
+body{
+    position: relative;
+    width: 100%;
+}
+
+body img{
+    display: block;
+    position: absolute;
+    left: 15%;
+    width: 70%;
+    z-index: -1;
+}
+
+header{
+    background-color: rgba(60, 120, 160, 0.9);
+    color: white;
+    font-size: 150%;
+    padding: 10px;
+}
+
+h1, h2{
+    text-align: center;
+    font-style: italic;
+}
+
+section{
+    display: flex;
+}
+
+#left{
+    background-color: rgba(0, 100, 0, 0.6);
+    margin: 2%;
+    width: 75%;
+    height: 600px;
+    font-size: 120%;
+    overflow: scroll;
+    box-shadow: 10px 10px 7px dimgray;
+}
+
+a, dt{
+    color: white;
+}
+
+dd{
+    padding: 1%;
+}
+
+dd:hover{
+    background-color: lightgreen;
+}
+
+#right{
+    width: 15%;
+}
+
+#right div{
+    background-color: rgba(0, 100, 0, 0.6);
+    margin: 1%;
+    box-shadow: 10px 10px 7px dimgray;
+    height: 300px;
+}
+
+footer{
+    background-color: rgba(60, 120, 160, 0.9);
+    color: white;
+    padding: 10px;
+}
