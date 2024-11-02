@@ -29,8 +29,8 @@
                     $poczatek = $row["poczatek"];
                     $zrodlo = $row["zrodlo"];
                     $opis = $row["opis"];
-                    echo "<dt>"."$nazwa, rozpoczyna sie w $poczatek"."</dt>";
-                    echo "<a>"."zobacz zdjecie $zrodlo"."</a>";
+                    echo "<dt>"."$nazwa, rozpoczyna sie w $poczatek";
+                    echo "<a href='$zrodlo.jpg'> zobacz zdjecie </a> </dt>";
                     echo "<dd>"."$opis"."</dd>";
                 }
 
