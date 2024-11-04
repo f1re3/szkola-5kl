@@ -40,7 +40,7 @@
         </div>
         <div class="mid">
             <img src="pliki/biblioteka.png" alt="biblioteka">
-            <h6>ul. Czytelników &nbsp; 15; Książkowice Małe</h6>
+            <h6>ul. Czytelników&nbsp;15; Książkowice Małe</h6>
             <p><a href="biuro@bib.pl">Czy masz jakieś uwagi?</a></p>
         </div>
         <div class="right">
