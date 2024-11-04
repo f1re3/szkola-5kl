@@ -1,0 +1,19 @@
+− Zapytanie 1: wstawiające do tabeli czytelnicy nowy rekord z danymi: Ewelina Romanowska z kodem 56677. Pole klucza głównego nadawane automatycznie
+INSERT INTO czytelnicy (imie, nazwisko, kod)
+VALUES ('Ewelina', 'Romanowska', 56677);
+
+− Zapytanie 2: wybierające jedynie pola imie i nazwisko dla wszystkich rekordów w tabeli czytelnicy, posortowane rosnąco według nazwisk 
+SELECT imie, nazwisko
+FROM czytelnicy
+ORDER BY nazwisko Asc;
+
+− Zapytanie 3: wybierające jedynie pole tytul dla wszystkich utworów, których nazwisko autora to Sienkiewicz
+SELECT tytul
+FROM ksiazki
+WHERE id_autor = (SELECT id FROM autorzy WHERE nazwisko = 'Sienkiewicz');
+
+− Zapytanie 4: wybierające jedynie pole nazwisko dla wszystkich rekordów w tabeli autorzy oraz obliczające liczbę tytułów danego autora znajdujących się w bazie biblioteka. Nazwa kolumny (alias) dla zliczania tytułów: ile_tytulow
+SELECT nazwisko, COUNT(tytul)
+FROM autorzy
+    INNER JOIN ksiazki ON autorzy.id = ksiazki.id_autor
+GROUP BY nazwisko;

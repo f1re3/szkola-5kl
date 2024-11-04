@@ -1,0 +1,45 @@
+*{
+    margin: auto;
+    font-family: tahoma;
+}
+
+header, footer{
+    background-color: saddlebrown;
+    color: white;
+    padding: 3px;
+    text-align: center;
+}
+
+main{
+    display: flex;
+}
+
+.left, .right{
+    background-color: tan;
+    height: 400px;
+    width: 40%;
+}
+
+input{
+    margin: 5px;
+}
+
+h4{
+    text-align: center;
+}
+
+li:hover{
+    background-color: sienna;
+    color: white;
+}
+
+.mid{
+    background-color: wheat;
+    height: 400px;
+    width: 20%;
+}
+
+img{
+    margin-right: 20px;
+    float: right;
+}

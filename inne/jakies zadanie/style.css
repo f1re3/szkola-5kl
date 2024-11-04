@@ -1,0 +1,38 @@
+body{
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+    grid-template-areas: 
+        'gl gp gp'
+        'gl sr dp'
+        'dl dl dp';
+}
+
+main{
+    grid-area: sr;
+    background-color: blueviolet;
+    height: 300px;
+}
+
+.gl{
+    grid-area: gl;
+    background-color: aqua;
+    height: 600px;
+}
+
+.gp{
+    grid-area: gp;
+    background-color: black;
+    height: 300px;
+}
+
+.dl{
+    grid-area: dl;
+    background-color: blue;
+    height: 300px;
+}
+
+.dp{
+    grid-area: dp;
+    background-color: brown;
+    height: 600px;
+}
