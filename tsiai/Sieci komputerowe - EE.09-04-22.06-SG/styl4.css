@@ -55,3 +55,15 @@ button:hover{
     background-color: honeydew;
     color: darkgreen;
 }
+
+.mniejsza{
+    background-color: red;
+}
+
+.przedzial{
+    background-color: yellow;
+}
+
+.inne{
+    background-color: honeydew;
+}
