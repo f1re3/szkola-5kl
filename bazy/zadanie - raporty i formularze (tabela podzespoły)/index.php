@@ -64,5 +64,22 @@
         <input type="text" name="cena" id="cena"><br>
         <button>wyslij</button>
     </form>
+    <form action="usuwanie.php" method="post">
+        <label for="podzespoly">wybierz ktory usunac</label>
+        <select name="podzespoly" id="podzesloly">
+            <?php
+                $sql = "SELECT podzespoly.id, typy.kategoria, podzespoly.cena, podzespoly.nazwa
+                FROM podzespoly
+                    INNER JOIN typy ON podzespoly.typy_id=typy.id;";
+
+                $result = $conn -> query($sql);
+                $lista = $result -> fetch_all(1);
+                foreach($lista as $pod){
+                    echo "<option value='{$pod['id']}'>{$pod['id']} {$pod['kategoria']} {$pod['cena']} {$pod['nazwa']}</option>";
+                }
+            ?>
+        </select>
+        <button>usun</button>
+    </form>
 </body>
 </html>
