@@ -1,0 +1,20 @@
+− Zapytanie 1: wybierające jedynie pola dataZadania i wpis dla zadań, z miesiąca sierpnia
+SELECT dataZadania, wpis
+FROM zadania
+WHERE miesiac = 'sierpien';
+
+− Zapytanie 2: wybierające jedynie pola miesiac i rok dla zadania z dnia 7 sierpnia 2020 r.
+SELECT miesiac, rok
+FROM zadania
+WHERE dataZadania = '2020-08-07';
+
+− Zapytanie 3: wybierające jedynie nazwę miesiąca oraz liczące dla każdego miesiąca ile jest wpisów rozpoczynających się od słowa „Weterynarz” w kolumnie wpis
+SELECT miesiac, COUNT(wpis)
+FROM zadania
+WHERE wpis LIKE 'Weterynarz %'
+GROUP BY miesiac;
+
+− Zapytanie 4: aktualizujące pole wpis dla zadania z datą 9 sierpnia 2020, nowy wpis to „Wycieczka: Zalew Mietkowski”
+UPDATE zadania
+SET wpis = 'Wycieczka: Zalew Mietkowski'
+WHERE dataZadania = '2020-08-09';

@@ -1,0 +1,73 @@
+*{
+    font-family: century;
+    margin: auto;
+}
+
+header, footer{
+    background-color: indigo;
+    color: white;
+    font-style: italic;
+    padding: 2px;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main div{
+    width: 50%;
+    height: 470px;
+    text-align: center;
+}
+
+img{
+    padding: 3px;
+    margin: 10px;
+    border: 2px slateblue dashed;
+}
+
+a{
+    color: white;
+}
+
+button{
+    background-color: slateblue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+
+button:hover{
+    background-color: indigo;
+}
+
+input[type="range"]{
+    width: 80%;
+}
+
+/* clasy */
+.blur{
+    filter: blur(5px);
+}
+
+.sepia{
+    filter: sepia(50);
+}
+
+.negativ{
+    filter: invert(50);
+}
+
+.color{
+    filter: grayscale(0);
+}
+
+.black-white{
+    filter: grayscale(100);
+}
+
+.dsa{
+    filter: brightness();
+}

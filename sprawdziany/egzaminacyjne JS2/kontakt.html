@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styl.css">
+    <link rel="shortcut icon" href="pliki/favicon.png" type="image/x-icon">
+    <script src="./script.js" defer></script>
+    <title>Komputery</title>
+</head>
+<body>
+    <header>
+        <img src="./pliki/animacja.gif" alt="pogotowie komputerowe">
+    </header>
+    <menu>
+        <a href="./index.html">Strona Glowna</a>
+        <a href="./kontakt.html">Kontakt</a>
+    </menu>
+    <main>
+        <div id="M-1"></div>
+        <div id="M-2">
+            <h2>Kontakt</h2>
+            <Table>
+                <tr>
+                    <td>imie: </td>
+                    <td>
+                        <input type="text" id="firstname">
+                    </td>
+                </tr>
+                <tr>
+                    <td>nazwisko: </td>
+                    <td>
+                        <input type="text" id="surname">
+                    </td>
+                </tr>
+                <tr>
+                    <td>e-mail: </td>
+                    <td>
+                        <input type="email" id="email">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Zgloszenie: </td>
+                    <td>
+                        <select name="services" id="services">
+                            <option value="naprawa komputerow">naprawa komputerow</option>
+                            <option value="odzyskiwanie danych">odzyskiwanie danych</option>
+                            <option value="wirusy">wirusy</option>
+                            <option value="konfiguracja LAN">konfiguracja LAN</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="checkbox" name="send" id="send" checked>
+                        <label for="send">wyslij kopie wiadomosci</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <button id="btnC">czysc</button>
+                        <button id="btnS">wyslij</button>
+                    </td>
+                </tr>
+            </Table>
+            <hr>
+            <p id="result"></p>
+        </div>
+        <div id="M-3"></div>
+    </main>
+    <footer>
+        Autor: <i>00000000000</i>
+    </footer>
+</body>
+</html>

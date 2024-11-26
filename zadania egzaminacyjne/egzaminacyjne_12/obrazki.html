@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styl.css">
+    <script src="./script.js" defer></script>
+    <title>Efekty obrazu</title>
+</head>
+<body>
+    <header>
+        <h2>Efekty na obrazach</h2>
+    </header>
+    <main>
+        <div id="M-1">
+            <img src="./pliki/pszczola.jpg" alt="pszczola na fioletowym kwiatku" id="bee"><br>
+            <input type="radio" name="options" id="blur" value="1">
+            <label for="blur">Blur</label><br>
+            <input type="radio" name="options" id="sepia" value="2">
+            <label for="sepia">sepia</label><br>
+            <input type="radio" name="options" id="negatyw" value="3">
+            <label for="negatyw">negatyw</label><br>
+            <button id="btnA1">zastosuj</button>
+        </div>
+        <div id="M-2">
+            <img src="./pliki/pomarancza.jpg" alt="drzewo pomaranczy" id="orange"><br>
+            <button id="btnC">kolorowy</button>
+            <button id="btnB">czarno baly</button>
+        </div>
+        <div id="M-3">
+            <img src="./pliki/owoce.jpg" alt="kosz pelen owocow" id="fruits"><br>
+            <input type="range" min="0" max="100" value="100" id="range1"><br>
+            <button id="btnA2">zastosuj</button>
+        </div>
+        <div id="M-4">
+            <img src="./pliki/zolw.jpg" alt="zolw w wodzie" id="turtle"><br>
+            <input type="range" min="0" max="250" id="range2"><br>
+            <button id="btnA3">zastosuj</button>
+        </div>
+    </main>
+    <footer>
+        <p><a href="http://www.css.com/" target="_blank">zobacz inne efekty obrazu</a></p>
+        <p>strone wykonal: 000000000</p>
+    </footer>
+</body>
+</html>

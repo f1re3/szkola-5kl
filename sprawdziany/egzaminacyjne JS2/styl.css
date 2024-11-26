@@ -1,0 +1,51 @@
+*{
+    background-color: #E0F7FA;
+    font-family: arial;
+}
+
+body{
+    width: 95%;
+    margin: auto;
+    text-align: center;
+}
+
+header{
+    background-color: #00838F;
+    height: 200px;
+}
+
+menu{
+    background-color: #006064;
+    padding: 15px;
+}
+
+menu a{
+    color: white;
+    text-decoration: none;
+    font-size: 150%;
+}
+
+main div{
+    height: 350px;
+    width: 33%;
+}
+
+footer{
+    background-color: #006064;
+    color: white;
+    text-align: right;
+    padding: 10px;
+}
+
+ol li{
+    text-align: left;
+}
+
+button{
+    background-color: #00838f;
+    color: white;
+}
+
+button:hover{
+    background-color: #80deea;
+}

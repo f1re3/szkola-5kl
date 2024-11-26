@@ -1,0 +1,51 @@
+*{
+    margin: auto;
+    font-family: tahoma;
+}
+
+header{
+    display: flex;
+    background-color: #7DA453;
+    color: white;
+    height: 120px;
+}
+
+.h1,.h2{
+    width: 40%;
+}
+
+.h3{
+    width: 20%;
+}
+
+form{
+    padding-top: 50px;
+}
+
+main{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+section{
+    background-color: #AED581;
+    width: 200px;
+    height: 100px;
+    margin: 7px;
+    border: 1px solid #7DA453;
+}
+
+section:hover{
+    background-color: #7DA453;
+    color: white;
+}
+
+h5{
+    text-align: center;
+}
+
+footer{
+    background-color: #7DA453;
+    color: white;
+    padding: 5px;
+}
