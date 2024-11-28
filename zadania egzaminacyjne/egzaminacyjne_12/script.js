@@ -1,7 +1,7 @@
 const imgB = document.getElementById('bee')
 const imgO = document.getElementById('orange')
 const imgF = document.getElementById('fruits')
-const imgT = document.getElementById('Turtle')
+const imgT = document.getElementById('turtle')
 const BtnA1 = document.getElementById('btnA1')
 const BtnA2 = document.getElementById('btnA2')
 const BtnA3 = document.getElementById('btnA3')
@@ -35,6 +35,5 @@ BtnA2.addEventListener('click', (e)=>{
 
 BtnA3.addEventListener('click', (e)=>{
     let rangeV = rangeE2.value
-    imgT.style.brightness = `${rangeV}%`
+    imgT.style.filter = `brightness(${rangeV})`
 })
-
