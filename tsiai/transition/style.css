@@ -1,0 +1,41 @@
+.blok1{
+    background-color: aqua;
+    width: 10rem;
+    height: 10rem;
+}
+
+.blok1:hover{
+    background-color: green;
+    transition: 2s;
+}
+
+.blok2 img{
+    width: 200px;
+    height: 200px;
+}
+
+.blok2 img:hover{
+    filter: opacity(0);
+    transition: 2s ease-in;
+}
+
+.blok3{
+    width: 20rem;
+    height: 10rem;
+    background-image: url(./pszczola.jpg);
+}
+
+.blok3 h3{
+    padding: 2rem;
+    filter: opacity(0);
+}
+
+.blok3:hover h3{
+    filter: opacity(100);
+    transition-delay: 1s;
+}
+
+.blok3:hover{
+    opacity: 50%;
+    transition: 1s ease-in;
+}
